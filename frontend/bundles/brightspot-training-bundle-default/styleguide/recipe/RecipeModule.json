@@ -1,0 +1,21 @@
+{
+  "_template": "/recipe/RecipeModule.hbs",
+
+  "title": "",
+  "image": {
+    "_template": "/image/Image.hbs",
+    "alt": "",
+    "image": {
+      "_image": true
+    }
+  },
+  "difficulty": "",
+  "prepTime": "",
+  "inactivePrepTime": "",
+  "cookTime": "",
+  "totalTime": "",
+  "ingredients": "",
+  "directions": "",
+
+  "_hidden": true
+}
