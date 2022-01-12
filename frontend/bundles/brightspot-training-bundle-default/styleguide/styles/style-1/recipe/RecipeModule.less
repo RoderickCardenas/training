@@ -1,23 +1,35 @@
 .RecipeModule {
+  border: 1px solid gray;
+  margin: 20px 0;
+  padding: 20px;
+
   &-title {
-    .title-2;
+    &:extend(.title-2);
+    margin-bottom: 20px;
   }
 
   &-meta {
-    .description-1;
+    &:extend(.description-2);
+
+    span {
+      font-weight: bold;
+    }
   }
 
   &-image {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 840px;
+    margin: 20px auto;
   }
 
-  &-ingredients-heading {
-    .subhead-1;
+  &-ingredients,
+  &-directions {
+    margin: 20px auto;
+
+    &-heading {
+      &:extend(.subhead-1);
+    }
   }
 
-  &-directions-heading {
-    .subhead-1;
+  @media @mq-md {
+    padding: 30px;
   }
 }

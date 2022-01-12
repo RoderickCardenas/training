@@ -5,23 +5,23 @@
 
     <div class="RecipeModule-meta">
         {{#with difficulty}}
-            <p>{{this}}</p>
+            <div class="RecipeModule-difficulty"><span>{{format "difficulty"}}:</span> {{this}}</div>
         {{/with}}
-        <p>
-            {{#with totalTime}}
-                {{format "totalTime"}}: {{this}}<br>
-            {{/with}}
-            {{#with prepTime}}
-                {{format "prepTime"}}: {{this}}<br>
-            {{/with}}
-            {{#with cookTime}}
-                {{format "cookTime"}}: {{this}}<br>
-            {{/with}}
-        </p>
+        {{#with totalTime}}
+            <div class="RecipeModule-totalTime"><span>{{format "totalTime"}}:</span> {{this}}</div>
+        {{/with}}
+        {{#with prepTime}}
+            <div class="RecipeModule-prepTime"><span>{{format "prepTime"}}:</span> {{this}}</div>
+        {{/with}}
+        {{#with cookTime}}
+            <div class="RecipeModule-cookTime"><span>{{format "cookTime"}}:</span> {{this}}</div>
+        {{/with}}
 
         {{#with image}}
             <div class="RecipeModule-image">
-                {{this}}
+                {{#set imageSize="medium"}}
+                    {{this}}
+                {{/set}}
             </div>
         {{/with}}
     </div>
